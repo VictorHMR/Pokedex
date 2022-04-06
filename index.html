@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>PokeDex</title>
+  <link rel="icon" type="imagem/png" href="img/Pokedex.png" />
+  <link rel="stylesheet" href="css/items.css" />
+  <link rel="stylesheet" href="css/btn.css" />
+  <link rel="stylesheet" href="css/circle.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/nav.css">
+  <script src="js/Jquery.min.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      
+      <a class="logo" href=""> Pokedex</a>
+
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <input type="text" class="inputS" id="search" onsubmit="searchPoke()" placeholder="Numero/Nome" />
+      <ul class="nav-list">
+
+        <li>
+          <label class="ShinyLBL" for="ShinyC">Shiny
+            <input class="ShinyRadio" type="checkbox" id="ShinyC" name="ShinyC" onclick="ShinyChange()" />
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li><button class="btn btnBlue" onclick="fetchPokemon()">All</button></li>
+        <li><button class="btn btnPurple" onclick="fetchPokemon(1)">1gen</button></li>
+        <li><button class="btn btnPink" onclick="fetchPokemon(2)">2gen</button></li>
+        <li><button class="btn btnBabyPink" onclick="fetchPokemon(3)">3gen</button></li>
+        <li><button class="btn btnAqua" onclick="fetchPokemon(4)">4gen</button></li>
+        <li><button class="btn btnGreen" onclick="fetchPokemon(5)">5gen</button></li>
+        <li><button class="btn btnYellow" onclick="fetchPokemon(6)">6gen</button></li>
+        <li><button class="btn btnWhite" onclick="fetchPokemon(7)">7gen</button></li>
+        <li>
+
+          <div class="Circle_Types">
+            <input type="checkbox" id="TypeMenu" />
+            <label for="TypeMenu" id="TypeId"><img src="img/pokeball.png" /></label>
+            <a href="#" onclick="searchType('bug')"><img src="img/elements/bug.ico" id="BugType" class="TypeItem" /></a>
+            <a href="#" onclick="searchType('dark')"><img src="img/elements/dark.ico" id="DarkType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('dragon')"><img src="img/elements/dragon.ico" id="DragonType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('electric')"><img src="img/elements/electric.ico" id="EletricType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('fairy')"><img src="img/elements/fairy.ico" id="FairyType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('fighting')"><img src="img/elements/fighting.ico" id="FightType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('fire')"><img src="img/elements/fire.ico" id="FireType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('flying')"><img src="img/elements/flying.ico" id="FlyType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('ghost')"><img src="img/elements/ghost.ico" id="GhostType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('grass')"><img src="img/elements/grass.ico" id="GrassType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('ground')"><img src="img/elements/ground.ico" id="GroundType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('ice')"><img src="img/elements/ice.ico" id="IceType" class="TypeItem" /></a>
+            <a href="#" onclick="searchType('normal')"><img src="img/elements/normal.ico" id="NormalType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('poison')"><img src="img/elements/poison.ico" id="PoisonType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('psychic')"><img src="img/elements/psychic.ico" id="PsyType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('rock')"><img src="img/elements/rock.ico" id="RockType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('steel')"><img src="img/elements/steel.ico" id="SteelType"
+                class="TypeItem" /></a>
+            <a href="#" onclick="searchType('water')"><img src="img/elements/water.ico" id="WaterType"
+                class="TypeItem" /></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+  <div class="containerPoke" data-js="pokemodal">
+
+    <div class="modalPoke">
+      <button class="FecharX btnBlack">X</button>
+      <button class="MudarD btnBlack">></button>
+      <button class="MudarE btnBlack">
+        < </button>
+
+          <div class="ModalImage">
+            <img id="modalImg" src=alt="">
+          </div>
+          <h2 class="modal-title" id="modalName"></h2>
+          <div class="InfoBox">
+            <div class="InfoSide1">
+              <div>
+                <h5>Altura:</h5>
+                <p class="valor" id="alturaP"></p>
+              </div>
+              <div>
+                <h5>Peso:</h5>
+                <p class="valor" id="pesoP"></p>
+              </div>
+              <div>
+                <h5>Habilidades:</h5>
+                <p class="valor" id="habilidadesP"></p>
+              </div>
+              <div>
+                <h5>Tipo:</h5>
+                <p class="valor" id="tiposP"></p>
+              </div>
+            </div>
+            <div class="InfoSide2">
+
+              <div>
+                <h5>Ataque:</h5>
+                <p class="valor" id="attackP"></p>
+              </div>
+              <div>
+                <h5>Defesa:</h5>
+                <p class="valor" id="defenseP"></p>
+              </div>
+              <div>
+                <h5>Atq Especial:</h5>
+                <p class="valor" id="attackSP"></p>
+              </div>
+              <div>
+                <h5>Def Especial:</h5>
+                <p class="valor" id="defenseSP"></p>
+              </div>
+              <div>
+                <h5>HP:</h5>
+                <p class="valor" id="hpP"></p>
+              </div>
+              <div>
+                <h5>Velocidade:</h5>
+                <p class="valor" id="speedP"></p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+  </div>
+
+  <div class="container">
+    <h1 id="tituloP"></h1>
+    <small id="aviso"></small>
+    <ul data-js="pokedex" class="pokedex"></ul>
+    <button id="mais" class="btnC btnBlack" onclick="MorePoke()">Carregar mais</button>
+  </div>
+
+  <script src="js/dex.js"></script>
+  <script src="js/Mobile.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

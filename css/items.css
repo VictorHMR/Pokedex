@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed');
+
+body {
+  background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230));
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 50px 90px 0 90px;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 54px;
+  font-weight: bold;
+}
+
+.pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding-inline-start: 0;
+}
+
+.card {
+  max-width: 150px;
+  list-style: none;
+  padding: 0 60px 0 60px;
+  color: #222;
+  border: #222 solid 3px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  user-select: none;
+  box-shadow:4px 4px 4px 4px rgba(0, 0, 0, 0.575) ;
+
+}
+.card:hover {
+  opacity: 0.6;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  border-radius: 50%;
+  background-color: rgb(80, 80, 80);
+  opacity: 0.7;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+}
+.card:hover {
+  animation: bounce 0.5s linear;
+}
+
+.card-title {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  font-size: 19px;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.card-subtitle {
+  margin-top: 2px;
+  font-weight: lighter;
+  position: relative;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.card-image {
+  width: 150px;
+  position: relative;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+.iconT {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.Geracoes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.iconDex {
+  width: 50px;
+}
+
+.mult {
+  width: 250px;
+  margin-left: 50px;
+}
+.inputS {
+  position: relative;
+  left: -300px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+}
+#aviso {
+  font-size: 20px;
+}
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+
+  80% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 999px) {
+  .container {
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 50px 100px 0 100px;
+  }
+
+  .pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding-inline-start: 0;
+  }
+  .card {
+    height: 450px;
+    max-width: 250px;
+    padding: 0 65px 0 65px;
+    list-style: none;
+    color: #222;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+  }
+  .card::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 45%;
+    border-radius: 100%;
+    background-color: rgb(80, 80, 80);
+    opacity: 0.7;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+  }
+  .card-image {
+    height: 250px;
+    width: 250px;
+    position: relative;
+    z-index: 2;
+  }
+  .iconT {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  .card-title {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-size: 40px;
+    font-weight: bolder;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-subtitle {
+    margin-top: 2px;
+    font-size: 25px;
+    position: relative;
+    z-index: 2;
+  }
+  .inputS {
+    position: absolute;
+    left: 55%;
+    width: 30%;
+    font-size: 35px;
+  }
+  #aviso {
+    font-size: 50px;
+  }
+  
+.container h1 {
+  text-align: center;
+  font-size: 94px;
+  font-weight: bold;
+}
+}
+
+.dark {
+  background-color: #707070;
+  color: wheat;
+}
+.ghost {
+  background-color: #7b62a3;
+}
+.steel {
+  background-color: #9eb7b8;
+}
+
+.fire {
+  background-color: #fd7d24;
+}
+
+.grass {
+  background-color: #9bcc50;
+}
+
+.electric {
+  background-color: #eed535;
+}
+
+.water {
+  background-color: #4592c4;
+}
+.ice {
+  background-color: #51c4e7;
+}
+.ground {
+  background: #ffffff;
+  background: linear-gradient(to right, #f7de3f, #ab9842);
+}
+
+.rock {
+  background-color: #a38c21;
+}
+
+.fairy {
+  background-color: #fdb9e9;
+}
+
+.poison {
+  background-color: #b97fc9;
+}
+
+.bug {
+  background-color: #729f3f;
+}
+
+.dragon {
+  background-color: #ffffff;
+  background: linear-gradient(to right, #53a4cf, #f16e57);
+}
+
+.psychic {
+  background-color: #f366b9;
+}
+
+.flying {
+  background-color: #e7afaf;
+  background: linear-gradient(to right, #3dc7ef, #bdb9b8);
+}
+
+.fighting {
+  background-color: #d56723;
+}
+
+.normal {
+  background-color: #a4acaf;
+}

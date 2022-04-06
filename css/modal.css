@@ -1,0 +1,209 @@
+.containerPoke {
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .9);
+  position: fixed;
+  z-index: 99;
+  display: none;
+}
+.FecharX {
+  position: absolute;
+  right: 30px;
+  text-decoration: none;
+  color: black;
+}
+.modalPoke {
+  position: absolute;
+  border: solid 8px rgb(11, 81, 104);
+  top: 5%;
+  width: 500px;
+  z-index: 99;
+  border-radius: 10px;
+  padding: 23px;
+  opacity: 1;
+  overflow: hidden;
+  -webkit-animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.ModalImage {
+  width: 220px;
+  margin: 40px auto 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(179, 177, 177);
+  border-radius: 50%;
+  border: solid 9px rgb(121, 5, 5);
+}
+.ModalImage img {
+  width: 100%;
+}
+
+.modal-title {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 39px;
+  font-weight: bolder;
+  position: relative;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/*------------------------------------Rodar------------------------------- */
+
+.InfoBox {
+  padding: 15px 5px 5px 5px;
+  margin-top: 2px;
+  font-weight: lighter;
+  text-align: center;
+  color: aliceblue;
+  background-color: rgba(83, 82, 82, 0.493);
+  border-radius: 10px;
+  perspective: 1000px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  height: 200px;
+}
+.InfoBox p {
+  color: black;
+  font-weight: bold;
+}
+.InfoBox h5 {
+  font-size: 1.2rem;
+}
+.InfoSide1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  padding: 5px;
+  margin-top: 2px;
+}
+.InfoSide2 {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 5px;
+  margin-top: 2px;
+  transform: rotateY(180deg);
+}
+.InfoSide1,
+.InfoSide2 {
+  backface-visibility: hidden;
+  z-index: -1;
+}
+.MudarE {
+  position: absolute;
+  top: 280px;
+  z-index: 100;
+}
+.MudarD {
+  position: absolute;
+  top: 280px;
+  right: 20px;
+  z-index: 100;
+}
+
+@media (max-width: 999px) {
+  .FecharX {
+    position: absolute;
+    right: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 10px 35px 10px 35px;
+    font-size: 60px;
+  }
+  .modalPoke {
+    position: absolute;
+    top: 80px;
+    width: 87vw;
+    height: 80vh;
+    z-index: 99;
+    border: solid 25px rgb(21, 76, 95);
+    border-radius: 10px;
+    padding: 23px;
+    opacity: 1;
+  }
+  .modalPoke h5 {
+    font-size: 60px;
+  }
+  .valor {
+    font-size: 40px;
+  }
+  .ModalImage {
+    width: 500px;
+    margin: 40px auto 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(83, 82, 82);
+    border: solid 25px rgba(100, 4, 4, 0.301);
+    border-radius: 50%;
+  }
+  .ModalImage img {
+    width: 100%;
+  }
+
+  .modal-title {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bolder;
+    position: relative;
+  }
+  .InfoSide1,
+  .InfoSide2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 5px;
+    margin-top: 2px;
+    grid-template-rows: 180px;
+  }
+  .InfoBox {
+    padding: 20px;
+    margin-top: 2px;
+    height: 45%;
+    font-weight: lighter;
+    text-align: center;
+    position: relative;
+    color: aliceblue;
+    background-color: rgba(83, 82, 82, 0.493);
+    border-radius: 10px;
+    perspective: 1000px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  .MudarE {
+    position: absolute;
+    top: 560px;
+    padding: 10px 35px 10px 35px;
+    font-size: 60px;
+  }
+  .MudarD {
+    position: absolute;
+    top: 560px;
+    right: 20px;
+    padding: 10px 35px 10px 35px;
+    font-size: 60px;
+  }
+}

@@ -1,0 +1,200 @@
+.Circle_Types {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+#TypeMenu {
+  display: none;
+}
+#TypeId {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 99;
+}
+#TypeId img {
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+  border-radius: 50%;
+}
+
+.TypeItem {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: all 0.1s ease-out;
+  z-index: 98;
+  margin-left: 2px;
+}
+
+#TypeMenu:checked ~ a #BugType {
+  transform: translateY(35px);
+}
+#TypeMenu:checked ~ a #DarkType {
+  transform: translateY(65px);
+
+  transition-delay: 0.1s;
+}
+#TypeMenu:checked ~ a #DragonType {
+  transform: translateY(95px);
+  transition-delay: 0.1s;
+}
+#TypeMenu:checked ~ a #EletricType {
+  transform: translateY(125px);
+  transition-delay: 0.2s;
+}
+#TypeMenu:checked ~ a #FairyType {
+  transform: translateY(155px);
+  transition-delay: 0.2s;
+}
+#TypeMenu:checked ~ a #FightType {
+  transform: translateY(185px);
+  transition-delay: 0.3s;
+}
+#TypeMenu:checked ~ a #FireType {
+  transform: translateY(215px);
+  transition-delay: 0.3s;
+}
+#TypeMenu:checked ~ a #FlyType {
+  transform: translateY(245px);
+  transition-delay: 0.4s;
+}
+#TypeMenu:checked ~ a #GhostType {
+  transform: translateY(275px);
+  transition-delay: 0.4s;
+}
+#TypeMenu:checked ~ a #GrassType {
+  transform: translateY(305px);
+  transition-delay: 0.5s;
+}
+#TypeMenu:checked ~ a #GroundType {
+  transform: translateY(335px);
+  transition-delay: 0.5s;
+}
+#TypeMenu:checked ~ a #IceType {
+  transform: translateY(365px);
+  transition-delay: 0.6s;
+}
+#TypeMenu:checked ~ a #NormalType {
+  transform: translateY(395px);
+  transition-delay: 0.6s;
+}
+#TypeMenu:checked ~ a #PoisonType {
+  transform: translateY(425px);
+  transition-delay: 0.7s;
+}
+#TypeMenu:checked ~ a #PsyType {
+  transform: translateY(455px);
+  transition-delay: 0.7s;
+}
+#TypeMenu:checked ~ a #RockType {
+  transform: translateY(485px);
+  transition-delay: 0.8s;
+}
+#TypeMenu:checked ~ a #SteelType {
+  transform: translateY(515px);
+  transition-delay: 0.8s;
+}
+#TypeMenu:checked ~ a #WaterType {
+  transform: translateY(545px);
+  transition-delay: 0.9s;
+}
+
+@media (max-width: 999px) {
+  .Circle_Types {
+    width: 80px;
+    height: 80px;
+  }
+  #TypeId {
+    cursor: pointer;
+    margin-right: 50px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 99;
+  }
+  .TypeItem {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    transition: all 0.1s ease-out;
+    z-index: 98;
+    margin-left: 2px;
+  }
+
+  #TypeMenu:checked ~ a #BugType {
+    transform: translateX(-80px);
+  }
+  #TypeMenu:checked ~ a #DarkType {
+    transform: translateX(-160px);
+    transition-delay: 0.1s;
+  }
+  #TypeMenu:checked ~ a #DragonType {
+    transform: translateX(80px);
+    transition-delay: 0.1s;
+  }
+  #TypeMenu:checked ~ a #EletricType {
+    transform: translateX(160px);
+    transition-delay: 0.2s;
+  }
+  #TypeMenu:checked ~ a #FairyType {
+    transform: translateY(80px);
+    transition-delay: 0.2s;
+  }
+  #TypeMenu:checked ~ a #FightType {
+    transform: translate(-80px, 80px);
+    transition-delay: 0.3s;
+  }
+  #TypeMenu:checked ~ a #FireType {
+    transform: translate(80px, 80px);
+    transition-delay: 0.3s;
+  }
+  #TypeMenu:checked ~ a #FlyType {
+    transform: translate(160px, 80px);
+    transition-delay: 0.4s;
+  }
+  #TypeMenu:checked ~ a #GhostType {
+    transform: translate(-160px, 80px);
+    transition-delay: 0.4s;
+  }
+  #TypeMenu:checked ~ a #GrassType {
+    transform: translateY(160px);
+    transition-delay: 0.5s;
+  }
+  #TypeMenu:checked ~ a #GroundType {
+    transform: translate(80px, 160px);
+    transition-delay: 0.5s;
+  }
+  #TypeMenu:checked ~ a #IceType {
+    transform: translate(-80px, 160px);
+    transition-delay: 0.6s;
+  }
+  #TypeMenu:checked ~ a #NormalType {
+    transform: translate(160px, 160px);
+    transition-delay: 0.6s;
+  }
+  #TypeMenu:checked ~ a #PoisonType {
+    transform: translate(-160px, 160px);
+    transition-delay: 0.7s;
+  }
+  #TypeMenu:checked ~ a #PsyType {
+    transform: translateY(240px);
+    transition-delay: 0.7s;
+  }
+  #TypeMenu:checked ~ a #RockType {
+    transform: translate(80px, 240px);
+    transition-delay: 0.8s;
+  }
+  #TypeMenu:checked ~ a #SteelType {
+    transform: translate(-80px, 240px);
+    transition-delay: 0.8s;
+  }
+  #TypeMenu:checked ~ a #WaterType {
+    transform: translateY(320px);
+    transition-delay: 0.9s;
+  }
+}
